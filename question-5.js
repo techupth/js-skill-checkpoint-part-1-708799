@@ -23,7 +23,7 @@ const promotionCode = "";
 function calculateTotalPrice(products, promotionCode) {
   let totalPrice = 0;
   for (let i = 0; i < products.length; i++) {
-    totalPrice = totalPrice + products[i].quantity * products[i].price;
+    totalPrice += products[i].quantity * products[i].price;
   }
   console.log(totalPrice);
   if (promotionCode === "SALE20") {

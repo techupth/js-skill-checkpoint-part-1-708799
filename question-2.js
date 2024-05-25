@@ -20,7 +20,7 @@ let total = 0;
 for (let i = 0; i < inventory.length; i++) {
   console.log(inventory[i].price);
   console.log(inventory[i].quantity);
-  total = total + inventory[i].price * inventory[i].quantity;
+  total += inventory[i].price * inventory[i].quantity;
 }
 
 console.log("มูลค่ารวมของจำนวนสินค้าทั้งหมดในสต็อก " + total + " บาท");

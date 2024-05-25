@@ -18,5 +18,12 @@ for (let i = 0; i < myTodo.length; i++) {
 }
 
 // 3) ลบ To-do สุดท้ายที่อยู่ใน Array ออก
+myTodo.pop();
 
-// 4) ให้แสดงข้อความของ To-do ตัวสุดท้ายที่อยู่ในรายการออกมาบนหน้าจอ Console
+// 4) นำ myTodo มาแสดงบนหน้าจอ Console
+console.log(myTodo);
+
+// 5)
+console.log(
+  `Todo id: ${myTodo[myTodo.length - 1].id}, ${myTodo[myTodo.length - 1].todo}`
+);

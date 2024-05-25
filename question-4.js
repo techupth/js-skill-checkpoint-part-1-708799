@@ -5,14 +5,19 @@ const inventory = [
   { name: "Orange", price: 30, quantity: 60 },
 ];
 // เริ่มเขียนโค้ดตรงนี้
-const checkLowestQuantity = [];
+// Loop
+let lowestQuantity = inventory[0];
 for (let i = 0; i < inventory.length; i++) {
-  let highestQuantity = inventory[0].quantity;
-  if (inventory[i].quantity < highestQuantity) {
-    checkLowestQuantity.push(
-      `สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ ${inventory[i].name} ซึ่งมี ${inventory[i].quantity}`
-    );
-    break; // ผิดแน่ๆ
+  if (inventory[i].quantity < lowestQuantity.quantity) {
+    lowestQuantity = inventory[i];
   }
 }
-console.log(checkLowestQuantity);
+
+// Use Built in
+// let lowestQuantity = inventory.reduce((accumulator, currentValue) =>
+//   currentValue.quantity < accumulator.quantity ? currentValue : accumulator
+// );
+
+console.log(
+  `สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ ${lowestQuantity.name} ซึ่งมี ${lowestQuantity.quantity}`
+);
